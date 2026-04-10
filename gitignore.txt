@@ -1,0 +1,31 @@
+# ── Environment ───────────────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ── Foundry build artefacts ───────────────────────────────────────────────────
+out/
+cache/
+broadcast/
+
+# ── Dependencies ──────────────────────────────────────────────────────────────
+# lib/ is managed by forge — commit the .gitmodules file instead
+# Uncomment the next line if you prefer not to commit lib/
+# lib/
+
+# ── IDE ───────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── OS ────────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Coverage ──────────────────────────────────────────────────────────────────
+lcov.info
+coverage/
+
+# ── Node (if any scripts use node) ────────────────────────────────────────────
+node_modules/
