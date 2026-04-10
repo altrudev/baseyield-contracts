@@ -18,18 +18,19 @@ BaseYieldManager.sol
 ```
 
 **Key properties:**
-- Non-custodial — contract never holds user funds except atomically during rebalance
-- Non-upgradeable — no proxy, no admin, immutable after deployment
-- User-governed — all conditions set by user, enforced by contract
-- 7.5% fee on collected trading fees only — never on principal
+
+* Non-custodial — contract never holds user funds except atomically during rebalance
+* Non-upgradeable — no proxy, no admin, immutable after deployment
+* User-governed — all conditions set by user, enforced by contract
+* 7.5% fee on collected trading fees only — never on principal
 
 ## Setup
 
 ### Prerequisites
 
-- [Foundry](https://getfoundry.sh) — `curl -L https://foundry.paradigm.xyz | bash && foundryup`
-- An [Alchemy](https://alchemy.com) account for Base RPC
-- A [BaseScan](https://basescan.org) API key for contract verification
+* [Foundry](https://getfoundry.sh) — `curl -L https://foundry.paradigm.xyz | bash \&\& foundryup`
+* An [Alchemy](https://alchemy.com) account for Base RPC
+* A [BaseScan](https://basescan.org) API key for contract verification
 
 ### Install
 
@@ -81,13 +82,13 @@ forge coverage --report lcov
 ### Base Sepolia (testnet)
 
 ```bash
-# Verify your .env has BASE_SEPOLIA_RPC, DEPLOYER_PRIVATE_KEY,
-# SLIPSTREAM_NPM_ADDRESS, GELATO_AUTOMATE_ADDRESS, FEE_RECIPIENT_ADDRESS
+# Verify your .env has BASE\_SEPOLIA\_RPC, DEPLOYER\_PRIVATE\_KEY,
+# SLIPSTREAM\_NPM\_ADDRESS, GELATO\_AUTOMATE\_ADDRESS, FEE\_RECIPIENT\_ADDRESS
 
-forge script script/DeployTestnet.s.sol \
-  --rpc-url base_sepolia \
-  --broadcast \
-  --verify \
+forge script script/DeployTestnet.s.sol \\
+  --rpc-url base\_sepolia \\
+  --broadcast \\
+  --verify \\
   -vvvv
 ```
 
@@ -97,28 +98,28 @@ forge script script/DeployTestnet.s.sol \
 # ⚠️  Do NOT deploy to mainnet without a completed professional audit
 # ⚠️  Use a hardware wallet via cast wallet for mainnet deployments
 
-forge script script/Deploy.s.sol \
-  --rpc-url base_mainnet \
-  --broadcast \
-  --verify \
-  --ledger \
+forge script script/Deploy.s.sol \\
+  --rpc-url base\_mainnet \\
+  --broadcast \\
+  --verify \\
+  --ledger \\
   -vvvv
 ```
 
 ## Contract Addresses
 
-| Network      | Address | Status |
-|---|---|---|
-| Base Sepolia | TBD | Not yet deployed |
-| Base Mainnet | TBD | Not yet deployed — pending audit |
+|Network|Address|Status|
+|-|-|-|
+|Base Sepolia|TBD|Not yet deployed|
+|Base Mainnet|TBD|Not yet deployed — pending audit|
 
 ## Constructor Arguments
 
-| Argument | Description | Source |
-|---|---|---|
-| `_slipstreamNpm` | Aerodrome Slipstream NonfungiblePositionManager | basescan.org / aerodrome.finance/docs |
-| `_gelatoAutomate` | Gelato Automate contract on Base | docs.gelato.network/contract-addresses |
-| `_feeRecipient` | Your wallet address to receive protocol fees | Your choice |
+|Argument|Description|Source|
+|-|-|-|
+|`\_slipstreamNpm`|Aerodrome Slipstream NonfungiblePositionManager|basescan.org / aerodrome.finance/docs|
+|`\_gelatoAutomate`|Gelato Automate contract on Base|docs.gelato.network/contract-addresses|
+|`\_feeRecipient`|Your wallet address to receive protocol fees|Your choice|
 
 ## Audit Status
 
@@ -130,4 +131,5 @@ A professional smart contract audit is scheduled prior to mainnet deployment. Th
 
 MIT — see [LICENSE](LICENSE)
 
-Copyright (c) 2026 Sean / ALTRU.dev
+Copyright (c) 2026 Val Rukhaylo / ALTRU.dev
+
